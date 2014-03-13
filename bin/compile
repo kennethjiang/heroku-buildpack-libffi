@@ -46,6 +46,9 @@ pg_config_path() {
   export LIBRARY_PATH=$LIBRARY_PATH:$PREFIX_DIR/lib
 }
 
+env
+ls /app/lib
+
 get_source
 compile_source
 pg_config_path
