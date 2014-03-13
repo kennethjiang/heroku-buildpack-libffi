@@ -37,7 +37,6 @@ compile_source() {
     cd $CACHE_DIR/$ARCHIVE_DIR
     ./configure --prefix=$PREFIX_DIR
     make install
-  fi
 }
 
 pg_config_path() {
