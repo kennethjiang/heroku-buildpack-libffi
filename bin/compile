@@ -32,12 +32,10 @@ unpack_source() {
 }
 
 compile_source() {
-  unpack_source
-  if [ ! -f $CACHE_DIR/$ARCHIVE_DIR/haproxy ]; then
+    unpack_source
     echo "Compiling $ARCHIVE_DIR..."
     cd $CACHE_DIR/$ARCHIVE_DIR
     ./configure --prefix=$PREFIX_DIR
-    make TARGET=linux2628
     make install
   fi
 }
