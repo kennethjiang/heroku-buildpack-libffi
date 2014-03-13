@@ -1,13 +1,13 @@
 #!/bin/bash
 # bin/compile <build-dir> <cache-dir>
 
-PREFIX_DIR=/app/.heroku/vendor
 BUILD_DIR=$1
 CACHE_DIR=$2
 VERSION_DIR=`cd $(dirname $0); cd ..; pwd`
 VERSION=`cat $VERSION_DIR/VERSION | sed 's/[\r\n]*$//'`
 ARCHIVE=`basename $VERSION`
 ARCHIVE_DIR=`echo $ARCHIVE | sed 's/\.tar\.gz$//'`
+PREFIX_DIR=$1
 
 get_source() {
   if [ ! -d $CACHE_DIR ]; then
