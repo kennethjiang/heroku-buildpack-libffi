@@ -45,6 +45,7 @@ compile_source() {
 pg_config_path() {
   export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$PREFIX_DIR/lib/pkgconfig/
   echo "----> PKG_CONFIG_PATH=$PKG_CONFIG_PATH"
+  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$PREFIX_DIR/lib
 }
 
 get_source
