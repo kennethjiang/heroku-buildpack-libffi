@@ -1,0 +1,5 @@
+#!/bin/sh
+# bin/detect <build-dir>
+
+echo "-----> setting up for libffi"
+exit 0
