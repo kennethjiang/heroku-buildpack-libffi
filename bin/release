@@ -5,4 +5,6 @@ BUILD_DIR=$1
 cat <<EOF
 config_vars:
   PKG_CONFIG_PATH: "/app/lib/pkgconfig/:$BUILD_DIR/lib/pkgconfig/:$PKG_CONFIG_PATH"
+  LD_LIBRARY_PATH: "/app/lib/:$BUILD_DIR/lib/:$LD_LIBRARY_PATH"
+  LIBRARY_PATH: "/app/lib/:$BUILD_DIR/lib/:$LIBRARY_PATH"
 EOF
