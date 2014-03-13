@@ -49,6 +49,18 @@ get_source
 compile_source
 pg_config_path
 
+cat <<EOF >$PREFIX_DIR/lib/pkgconfig/libffi.pc
+prefix=/app
+exec_prefix=/app
+libdir=/app/lib
+includedir=/app/lib/libffi-3.0.13/include
+
+Name: libffi
+Description: Library supporting Foreign Function Interfaces
+Version: 3.0.13
+Libs: -L/app/lib -lffi
+Cflags: -I/app/lib/libffi-3.0.13/include
+EOF
 echo "-----> Done."
 
 exit 0
